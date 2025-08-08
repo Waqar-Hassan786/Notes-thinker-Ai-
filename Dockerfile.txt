@@ -1,0 +1,37 @@
+# Use a slim Python base image
+FROM python:3.11-slim
+
+# System settings
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+# Install minimal runtime libs often used by Pillow/ReportLab
+# (These are lightweight; helps avoid missing libjpeg/freetype at runtime)
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+      libjpeg62-turbo \
+      zlib1g \
+      libfreetype6 && \
+    rm -rf /var/lib/apt/lists/*
+
+# Workdir
+WORKDIR /app
+
+# Copy dependency file and install
+COPY requirements.txt /app/requirements.txt
+RUN python -m pip install --upgrade pip && \
+    pip install -r requirements.txt
+
+# Copy the rest of the application (includes fonts/ and templates/static)
+COPY . /app
+
+# Ensure chapters/ exists for runtime writes
+RUN mkdir -p /app/chapters
+
+# Default environment (Render sets PORT automatically, we keep a fallback)
+ENV PORT=8000
+
+# Start with Gunicorn (bind to $PORT as required by Render)
+# app:app -> "app" module with "app" Flask instance
+CMD ["bash", "-lc", "gunicorn -w ${WEB_CONCURRENCY:-2} -k gthread -t 120 -b 0.0.0.0:${PORT:-8000} app:app"]

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Maker - Chapter Wise Questions</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-book-open"></i>
+                    <h1>Notes Maker</h1>
+                </div>
+                <div class="user-info">
+                    <span>Welcome, <strong>Waqar Hassan</strong></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Chapter Input Section -->
+            <section class="chapter-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-layer-group"></i> Chapter Management</h2>
+                    <p>Upload question images and process chapter</p>
+                </div>
+                
+                <div class="chapter-input-card">
+                    <div class="input-group">
+                        <label for="chapterName">Chapter Name</label>
+                        <input type="text" id="chapterName" placeholder="Enter chapter name (e.g., Chapter 1, Physics Ch-5)" class="chapter-input">
+                    </div>
+                    
+                    <div class="upload-section">
+                        <div class="upload-header">
+                            <h3><i class="fas fa-images"></i> Upload Question Images</h3>
+                            <span class="image-counter">0 images selected</span>
+                        </div>
+                        
+                        <div id="dropZone" class="drop-zone">
+                            <div class="drop-content">
+                                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                                <h4>Drag & Drop Question Images</h4>
+                                <p>Or click to browse files</p>
+                                <input type="file" id="fileInput" multiple accept="image/*" class="file-input">
+                                <button type="button" class="browse-btn">
+                                    <i class="fas fa-folder-open"></i> Browse Files
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Image Preview -->
+                        <div id="imagePreview" class="image-preview-container">
+                            <!-- Images will be displayed here -->
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="processChapterBtn" class="btn btn-process" disabled>
+                            <i class="fas fa-magic"></i> Process Chapter
+                        </button>
+                        <button id="clearBtn" class="btn btn-clear">
+                            <i class="fas fa-trash"></i> Clear All
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Saved Chapters List -->
+            <section class="chapters-list-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-list"></i> Saved Chapters</h2>
+                    <div class="chapters-stats">
+                        <span id="chaptersCount">0 chapters</span> • 
+                        <span id="totalImages">0 total images</span>
+                    </div>
+                </div>
+                
+                <div id="chaptersList" class="chapters-grid">
+                    <!-- Saved chapters will be displayed here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Processing Modal -->
+    <div id="processModal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-magic"></i> Processing Your Chapter</h3>
+            </div>
+            <div class="modal-body">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+                <p id="processStatus" class="process-status">Initializing...</p>
+                <div class="processing-steps">
+                    <div class="step" id="step1"><i class="fas fa-check-circle"></i> Analyzing Images</div>
+                    <div class="step" id="step2"><i class="fas fa-circle"></i> Processing Questions</div>
+                    <div class="step" id="step3"><i class="fas fa-circle"></i> Generating Notes</div>
+                    <div class="step" id="step4"><i class="fas fa-circle"></i> Finalizing</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <!-- Success Modal -->
+<div id="successModal" class="modal hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content success-modal">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Chapter Processed Successfully!</h3>
+        <p>Your chapter has been processed and notes are ready.</p>
+        <div class="success-actions">
+            <button id="downloadNotesBtn" class="btn btn-download">
+                <i class="fas fa-download"></i> Download Notes
+            </button>
+            <button id="viewNotesBtn" class="btn btn-view">
+                <i class="fas fa-eye"></i> View Notes
+            </button>
+        </div>
+        <button id="closeSuccessBtn" class="btn btn-secondary">Close</button>
+    </div>
+</div>
+    <script src="static/script.js"></script>
+</body>
+</html>

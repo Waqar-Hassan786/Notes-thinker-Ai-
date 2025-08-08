@@ -1,0 +1,83 @@
+Chapter: chapter2
+==================================================
+
+Questions and Answers (JSON Format):
+{
+  "questions": [
+    {
+      "question": "What is an object?",
+      "answer_en": "An instance of a class that has state and behavior.",
+      "answer_ur": "ایک کلاس کا ایک ایسا نمونہ جو حالت اور رویہ رکھتا ہے۔"
+    },
+    {
+      "question": "Create an object.",
+      "answer_en": "Example: ClassName obj = new ClassName();",
+      "answer_ur": "مثال: ClassName obj = new ClassName();"
+    },
+    {
+      "question": "What is class?",
+      "answer_en": "A blueprint for creating objects, defining properties and methods.",
+      "answer_ur": "اشیاء بنانے کے لیے ایک خاکہ، خصوصیات اور طریقے متعین کرتا ہے۔"
+    },
+    {
+      "question": "Create a class?",
+      "answer_en": "Example: class ClassName { }",
+      "answer_ur": "مثال: class ClassName { }"
+    },
+    {
+      "question": "What is a method?",
+      "answer_en": "A block of code that performs a specific task.",
+      "answer_ur": "کوڈ کا ایک بلاک جو ایک مخصوص کام انجام دیتا ہے۔"
+    },
+    {
+      "question": "Create a method?",
+      "answer_en": "Example: void methodName() { }",
+      "answer_ur": "مثال: void methodName() { }"
+    },
+    {
+      "question": "Define Method Overloading?",
+      "answer_en": "Defining multiple methods with the same name but different parameters.",
+      "answer_ur": "ایک ہی نام کے ساتھ مختلف پیرامیٹرز کے ساتھ متعدد طریقے متعین کرنا۔"
+    },
+    {
+      "question": "Write Method Overloading Benefits?",
+      "answer_en": "Improves code readability and allows methods to perform similar functions.",
+      "answer_ur": "کوڈ کی پڑھنے کی صلاحیت کو بہتر بناتا ہے اور طریقوں کو مشابہ افعال انجام دینے کی اجازت دیتا ہے۔"
+    },
+    {
+      "question": "Write Uses of Method Overriding?",
+      "answer_en": "To provide specific implementation of a method in a subclass.",
+      "answer_ur": "ایک ذیلی کلاس میں ایک طریقے کا مخصوص نفاذ فراہم کرنے کے لیے۔"
+    },
+    {
+      "question": "Define Constructor?",
+      "answer_en": "A special method used to initialize objects.",
+      "answer_ur": "ایک خاص طریقہ جو اشیاء کو ابتدائی شکل دینے کے لیے استعمال ہوتا ہے۔"
+    },
+    {
+      "question": "Define access modifiers?",
+      "answer_en": "Keywords that set the accessibility of classes, methods, and variables.",
+      "answer_ur": "کی ورڈز جو کلاسز، طریقوں، اور متغیرات کی رسائی کو متعین کرتے ہیں۔"
+    },
+    {
+      "question": "Define Private Access Modifier?",
+      "answer_en": "Restricts access to the class itself.",
+      "answer_ur": "کلاس تک رسائی کو محدود کرتا ہے۔"
+    },
+    {
+      "question": "Define Protected Access Modifier?",
+      "answer_en": "Allows access to the class itself and subclasses.",
+      "answer_ur": "کلاس اور ذیلی کلاسز تک رسائی کی اجازت دیتا ہے۔"
+    },
+    {
+      "question": "What is default constructor?",
+      "answer_en": "A constructor that does not take any parameters.",
+      "answer_ur": "ایک کنسٹرکٹر جو کوئی پیرامیٹر نہیں لیتا۔"
+    },
+    {
+      "question": "What are Parameterized Constructors?",
+      "answer_en": "Constructors that take parameters to initialize object attributes.",
+      "answer_ur": "کنسٹرکٹر جو اشیاء کی خصوصیات کو ابتدائی شکل دینے کے لیے پیرامیٹرز لیتے ہیں۔"
+    }
+  ]
+}
