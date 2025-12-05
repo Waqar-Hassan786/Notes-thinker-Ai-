@@ -1,7 +1,7 @@
 # GoodWill AI Notes Maker
 
-![Project Banner](https://raw.githubusercontent.com/Waqar-Hassan786/markdown-assets/main/notes-maker-banner.png)
 ![WhatsApp Image 2025-12-05 at 09 05 10_bd8fea6e](https://github.com/user-attachments/assets/7d53b7a4-b270-4be1-b9fa-4a91e74b4cae)
+![WhatsApp Image 2025-12-05 at 08 57 43_607abcab](https://github.com/user-attachments/assets/06b6a9c9-586f-459f-a6fc-efc814229d37)
 
 
 **Transform question images into beautifully formatted, bilingual (English & Urdu) PDF notes instantly. Powered by GPT-4o-mini and advanced PDF generation.**
